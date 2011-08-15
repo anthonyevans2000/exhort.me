@@ -1,0 +1,6 @@
+%form{:action=>"/Generate",:method=>"post"}
+  - @genres.each do |genre|
+    %br
+    %input{:type=>"checkbox", :name=>"#{genre}", :value=>1}
+    =genre
+  %input{:type=>"submit",:value=>"Generate"}

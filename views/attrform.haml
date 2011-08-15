@@ -1,0 +1,6 @@
+%form{:action=>"/Generatebyattr",:method=>"post"}
+  - @attrlist.each do |attrs|
+    %br
+    %input{:type=>"checkbox", :name=>"#{attrs}", :value=>1}
+    =attrs
+  %input{:type=>"submit",:value=>"Generate"}

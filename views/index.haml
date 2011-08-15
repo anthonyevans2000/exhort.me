@@ -1,0 +1,19 @@
+%html  
+  %head  
+    %title Exhort.com - Where we exhort you to exert! (c)  
+  %body  
+    #wrapper  
+      #header  
+        %h1 Exhort.com 
+        %h2 Motivation for those that are not.  
+  
+      #content  
+        %h1 Give it a spin, see what you win!  
+        %p  
+  %form{:action=>"/Generate",:method=>"post"}
+  - @input.each do |i|
+   %br
+  %input{:type=>"checkbox", :name=>"#{i}", :value=>1}
+   =i
+    %br
+  %input{:type=>"submit",:value=>"Generate"}
